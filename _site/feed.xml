@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2021-07-22T21:52:48+08:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Jin’s Blog</title><subtitle>Document my learning notes.</subtitle><author><name>Jin Zhang</name></author><entry><title type="html">How do I build this blog?</title><link href="http://localhost:4000/blog/2021/07/21/introduction.html" rel="alternate" type="text/html" title="How do I build this blog?" /><published>2021-07-21T20:00:00+08:00</published><updated>2021-07-21T20:00:00+08:00</updated><id>http://localhost:4000/blog/2021/07/21/introduction</id><content type="html" xml:base="http://localhost:4000/blog/2021/07/21/introduction.html">&lt;blockquote&gt;
+  &lt;p&gt;本文主要介绍了这个博客的搭建过程。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;!--more--&gt;
+
+&lt;ul class=&quot;table-of-content&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#前言&quot; id=&quot;markdown-toc-前言&quot;&gt;前言&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#博客搭建&quot; id=&quot;markdown-toc-博客搭建&quot;&gt;博客搭建&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#安装jekyll&quot; id=&quot;markdown-toc-安装jekyll&quot;&gt;安装Jekyll&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#运行jekyll&quot; id=&quot;markdown-toc-运行jekyll&quot;&gt;运行Jekyll&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#效果测试&quot; id=&quot;markdown-toc-效果测试&quot;&gt;效果测试&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#表格&quot; id=&quot;markdown-toc-表格&quot;&gt;表格&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#语法高亮&quot; id=&quot;markdown-toc-语法高亮&quot;&gt;语法高亮&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#公式&quot; id=&quot;markdown-toc-公式&quot;&gt;公式&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#其他问题&quot; id=&quot;markdown-toc-其他问题&quot;&gt;其他问题&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#插入图片&quot; id=&quot;markdown-toc-插入图片&quot;&gt;插入图片&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#插入目录&quot; id=&quot;markdown-toc-插入目录&quot;&gt;插入目录&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;为什么要辛辛苦苦自己搭建一个博客呢，主要还是考虑到兼顾美观和实用性。&lt;/p&gt;
+
+&lt;p&gt;我的写作流程主要如下：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;第一步是写作，使用的书写软件有&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;notion&lt;/li&gt;
+      &lt;li&gt;语雀&lt;/li&gt;
+      &lt;li&gt;wolai&lt;/li&gt;
+      &lt;li&gt;typora&lt;/li&gt;
+      &lt;li&gt;vscode&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;其中写作体验最好的是&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wolai&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;typora&lt;/code&gt;。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;写完之后整理修改，然后发布。从笔记的角度来看，notion和wolai无疑都是很好的，但如果从阅读的角度来看，它们又差了点意思。语雀以知识库的形式储存文章，润物细无声地将知识结构化，这给人的阅读体验就非常棒。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;但语雀最大的缺点在于写作体验太差，界面样式太丑。对于第一个问题，我一般在typora上书写，然后复制到语雀上发布，缺点是修改和备份比较麻烦；对于第二个问题，我使用&lt;a href=&quot;https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=zh&quot;&gt;Stylus 插件&lt;/a&gt;，自己写了一个css样式如下，具体可以看我的博客：&lt;a href=&quot;https://www.yuque.com/hhjs/zj/hiyw4z&quot;&gt;语雀样式美化&lt;/a&gt;，修改之后显示效果倒也还行。&lt;/p&gt;
+
+&lt;p&gt;然而语雀更大的问题在于对数学公式的支持太差，除了输入很不方便以外，在windows上的显示也很差劲，无论是web端还是桌面端，公式与正常文字永远都对不齐。由于公式都是用SVG显示，导致我想自己修改也无能为力（也许可以通过修改css实现），这对于数学系的我来说无疑是一个暴击。&lt;/p&gt;
+
+&lt;p&gt;最后思来想去，还是用GitHub+markdown的形式比较好，修改和同步都非常方便，在此基础上自动生成博客也方便浏览，最重要的是不用操心图床，域名和服务器的问题。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Hexo：我之前使用Hexo搭建了博客，但Hexo每次发布之前要输一堆指令，用CL自动化又颇为麻烦，中间徒增一些不稳定因素。&lt;/li&gt;
+  &lt;li&gt;Hugo：Hugo是一个不错的选择，但暂时还不太熟悉。&lt;/li&gt;
+  &lt;li&gt;Mkdocs：&lt;a href=&quot;https://oi-wiki.org/&quot;&gt;OI Wiki&lt;/a&gt; 就是用其搭建的，但这种形式对内容的结构化要求非常高，一些日常笔记放上去会显得不伦不类。&lt;/li&gt;
+  &lt;li&gt;Jekyll：综合来说这个是最满足要求的，优点是历史悠久比较完善，主题也丰富。缺点是速度比较慢。但最重要的是与GitHub Page无缝衔接，用起来就很舒服。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;选择完之后，就是博客的搭建过程。对于主题的选择，我比较喜欢 &lt;a href=&quot;https://lilianweng.github.io/lil-log/&quot;&gt;Lil’Log&lt;/a&gt; 的样式，因此 fork 下来之后就直接上手修改。&lt;/p&gt;
+
+&lt;h2 id=&quot;博客搭建&quot;&gt;博客搭建&lt;/h2&gt;
+
+&lt;h3 id=&quot;安装jekyll&quot;&gt;安装Jekyll&lt;/h3&gt;
+
+&lt;p&gt;参考：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/350462079&quot;&gt;[Jekyll] macOS 安装 Jekyll - 知乎 (zhihu.com)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://jekyllrb.com/docs/installation/macos/&quot;&gt;Jekyll on macOS  Jekyll • Simple, blog-aware, static sites (jekyllrb.com)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;第一步，安装ruby&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Bash&quot;&gt;brew install ruby
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;安装完之后，会有如下提示，因为mac已经预装了2.6 版本的ruby。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/image.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;因此，我们要将默认的ruby路径改为新版本的，在重启终端之后，可以看到ruby路径已改变。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Bash&quot;&gt;echo &apos;export PATH=&quot;/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH&quot;&apos; &amp;gt;&amp;gt; ~/.zshrc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/image1.png&quot; alt=&quot;image1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;第二步，安装jekyll：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Bash&quot;&gt;gem install --user-install bundler jekyll
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;将Jekyll添加到路径，注意这里是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3.0.0&lt;/code&gt; 而不是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3.0.2&lt;/code&gt;。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Bash&quot;&gt;echo &apos;export PATH=&quot;$HOME/.gem/ruby/3.0.0/bin:$PATH&quot;&apos; &amp;gt;&amp;gt; ~/.zshrc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;运行jekyll&quot;&gt;运行Jekyll&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Bash&quot;&gt;jekyll new myblog
+cd myblog
+bundle exec jekyll serve
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/assets/images/image2.png&quot; alt=&quot;image2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;这样 Jekyll 就在本地环境上跑起来了，接下来是进行一些个性化修改，修改过程比较繁琐，这里就略去不提，可以参考以下链接：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/search?type=content&amp;amp;q=jekyll markdown语法&quot;&gt; jekyll markdown语法 - 搜索结果 - 知乎 (zhihu.com)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://watchzerg.github.io/2015/03/20/jekyll-write-blog.html&quot;&gt;博客搭建(四) 使用Jekyll写博客 (watchzerg.github.io)&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;效果测试&quot;&gt;效果测试&lt;/h2&gt;
+
+&lt;h3 id=&quot;表格&quot;&gt;表格&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;AI 框架&lt;/th&gt;
+      &lt;th&gt;使用人数&lt;/th&gt;
+      &lt;th&gt;特性&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;tensorflow&lt;/td&gt;
+      &lt;td&gt;多&lt;/td&gt;
+      &lt;td&gt;多在工业界使用&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;pytorch&lt;/td&gt;
+      &lt;td&gt;多&lt;/td&gt;
+      &lt;td&gt;学术圈常用&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;paddle&lt;/td&gt;
+      &lt;td&gt;少&lt;/td&gt;
+      &lt;td&gt;可以白嫖服务器&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;语法高亮&quot;&gt;语法高亮&lt;/h3&gt;
+
+&lt;p&gt;这是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;行内代码&lt;/code&gt;，this is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;inline code&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;torch&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iomanip&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Element&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;setw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Value&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;setw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;setw&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;公式&quot;&gt;公式&lt;/h3&gt;
+&lt;p&gt;Using Bayes’ rule, we have:&lt;/p&gt;
+
+\[\begin{aligned}
+q(\mathbf{x}_{t-1} \vert \mathbf{x}_t, \mathbf{x}_0) 
+&amp;amp;= q(\mathbf{x}_t \vert \mathbf{x}_{t-1}, \mathbf{x}_0) \frac{ q(\mathbf{x}_{t-1} \vert \mathbf{x}_0) }{ q(\mathbf{x}_t \vert \mathbf{x}_0) } \\
+&amp;amp;\propto \exp \Big(-\frac{1}{2} \big(\frac{(\mathbf{x}_t - \sqrt{\alpha_t} \mathbf{x}_{t-1})^2}{\beta_t} + \frac{(\mathbf{x}_{t-1} - \sqrt{\bar{\alpha}_{t-1}} \mathbf{x}_0)^2}{1-\bar{\alpha}_{t-1}} - \frac{(\mathbf{x}_t - \sqrt{\bar{\alpha}_t} \mathbf{x}_0)^2}{1-\bar{\alpha}_t} \big) \Big) \\
+&amp;amp;= \exp\Big( -\frac{1}{2} \big( \color{red}{(\frac{\alpha_t}{\beta_t} + \frac{1}{1 - \bar{\alpha}_{t-1}})} \mathbf{x}_{t-1}^2 - \color{blue}{(\frac{2\sqrt{\alpha_t}}{\beta_t} \mathbf{x}_t + \frac{2\sqrt{\bar{\alpha}_t}}{1 - \bar{\alpha}_t} \mathbf{x}_0)} \mathbf{x}_{t-1} + C(\mathbf{x}_t, \mathbf{x}_0) \big) \Big)
+\end{aligned}\]
+
+&lt;h2 id=&quot;其他问题&quot;&gt;其他问题&lt;/h2&gt;
+
+&lt;h3 id=&quot;插入图片&quot;&gt;插入图片&lt;/h3&gt;
+
+&lt;p&gt;Jekyll 不能在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; 里新建文件夹，这也意味着插入图片会变得比较困难，参考该链接下的回答：&lt;a href=&quot;https://www.zhihu.com/question/31123165&quot;&gt;Jekyll博客中如何用相对路径来加载图片？ - 知乎&lt;/a&gt;，最好的方式是使用图床，但考虑到图床的不稳定性，也挺麻烦。我采用的方式是先将在typora中设置将图片保存到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;../assets/images&lt;/code&gt; 文件夹下，然后发布时统一将其替换成 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/blog/assets/images/diffusion-beta.png&lt;/code&gt;，使用正则表达式：&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;\(\.\./assets/images/(.*)\)
+
+(/blog/assets/images/$1)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;插入目录&quot;&gt;插入目录&lt;/h3&gt;
+
+&lt;p&gt;使用如下代码：&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{:class=&quot;table-of-content&quot;}
+* TOC
+{:toc}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Jin Zhang</name></author><category term="blog" /><category term="html" /><summary type="html">本文主要介绍了这个博客的搭建过程。</summary></entry></feed>
